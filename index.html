@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Will Walters | Professional Highlights</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     /* ===== GLOBAL STYLES ===== */
     body {
@@ -23,12 +24,12 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     nav {
       background: #3949ab;
-      padding: 0.5rem;
+      padding: 0.8rem;
       text-align: center;
     }
 
@@ -43,25 +44,76 @@
       text-decoration: underline;
     }
 
+    .skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.skills-table th {
+  background: #3949ab;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px 6px 0 0;
+}
+
+.skills-table td {
+  background: #f9f9ff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+    
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 1.5rem;
       background: white;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .card {
-  background: #f9f9ff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-     }
 
     section h2 {
       margin-top: 0;
       color: #1a237e;
+    }
+
+    /* ===== CARD STYLE ===== */
+    .card {
+      background: #f9f9ff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    /* ===== GRID STYLES ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skills-grid div {
+      background: #eef0f9;
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+
+    /* ===== CONTACT STYLES ===== */
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin: 0.6rem 0;
+    }
+
+    .contact-list i {
+      margin-right: 8px;
+      color: #3949ab;
     }
 
     footer {
@@ -91,162 +143,173 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===== ABOUT ===== 
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I am currently a senior at Purdue University majoring in Aeronautical and Astronautical Engineering with a focus in Astrodynamics. 
-      My academic interests include orbital mechanics, guidance & navigation, and launch vehicle trajectory design. In addition to these aerospace
-      interests, I am also highly motivated by the use of computer science and software in engineering. I am very passionate about the growing space 
-      industry and the mission to send people to Mars and explore the Universe! Some of my other hobbies include being a passionate Philidelphia sports 
-      fan, competing on the Lacrosse field, and other outdoor activities such as star gazing, hiking, and biking. I am seeking a full time role in the aerospace 
-      industry for after I graduate school and am very excited to start contributing to the high levels of engineering in the work force.
-    </p>
-  </section>
+    <p>Senior at Purdue University studying Aeronautical & Astronautical Engineering (Astrodynamics focus).</p>
+    <ul>
+      <li>Passionate about orbital mechanics & trajectory design</li>
+      <li>Interested in guidance, navigation, and launch vehicles</li>
+      <li>Excited about the future of the space industry & Mars missions</li>
+      <li>Hobbies: lacrosse, Philadelphia sports, stargazing, hiking</li>
+    </ul>
+  </section> -->
+
+  <!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Senior at Purdue University studying Aeronautical & Astronautical Engineering (Astrodynamics focus).
+  </p>
+  <ul>
+    <li>Passionate about orbital mechanics & trajectory design</li>
+    <li>Interested in guidance, navigation, and launch vehicles</li>
+    <li>Excited about the future of the space industry & Mars missions</li>
+    <li>Hobbies: lacrosse, Philadelphia sports, stargazing, hiking</li>
+  </ul>
+  <p>
+    <span id="moreText" style="display:none;">
+      Beyond academics, I’m deeply motivated by the use of software in engineering.  
+      My experiences at Purdue and Subaru of Indiana Automotive helped me grow in  
+      project planning, technical analysis, and teamwork. I look forward to  
+      contributing to cutting-edge projects in space exploration and advanced aerospace systems.  
+    </span>
+    <a href="javascript:void(0);" id="readMoreBtn" onclick="toggleText()">Read more</a>
+  </p>
+</section>
+
+<script>
+  function toggleText() {
+    var moreText = document.getElementById("moreText");
+    var btn = document.getElementById("readMoreBtn");
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btn.innerHTML = "Read less";
+    } else {
+      moreText.style.display = "none";
+      btn.innerHTML = "Read more";
+    }
+  }
+</script>
+
+
 
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience">
     <h2>Work Experience</h2>
-    <div class = "card">
-      <b><h3>Subaru of Indiana Automotive, Inc.</h3></b>
+    <div class="card">
+      <h3>Subaru of Indiana Automotive, Inc.</h3>
+      <p><b>Manufacturing Engineering Intern</b> | Jun–Aug 2025</p>
       <ul>
-        <li>Testing</li>
+        <li>Researched energy regeneration retrofit options</li>
+        <li>Produced AutoCAD layouts and technical one-pagers</li>
+        <li>Supported solar panel network installation project</li>
+        <li>Collaborated with contractors and managed RFQ process</li>
       </ul>
     </div>
-    Manufacturing Engineering Summer Intern. June 2nd - August 22nd<br>
-  
-    During the summer of 2025, I had the great opportunity to work at SIA. I was a Mechanical Engineering
-    Administrator with the Plant Planning group. The group's focuses were on Energy Sustainability and Plant
-    Planning. During the course of the summer I was able to successfully provide work and research towards
-    these focuses. <br>
-    Here are some projects I worked on: <br> 
-    <ul>
-        <li>Investigating retrofitting a part of the plant for energy regeneration.</li>
-        <li>Finding estimates and creating an 11 x 7 " one-page presentable for company negotiations </li>
-        <li>Providing electrical contractors with a one-page specification sheet for a request for quote
-        for a network connection cable installation as a part of a solar panel installation. </li>
-        <li>Taking electrical contractors through a walkthrough, attaining quotes, and assisting in the
-        process for submitting a Purchasing Order.</li>
-        <li>Creating AutoCAD layouts for proposed projects and comparing them with the systems currently in 
-        the plant</li><br>
-    </ul>
-    Technical Experience gained:
-    <ul>
-      <li>Subaru horizontally opposed boxer engine teardown and build up</li>
-      <li>Better understanding into engine to drivetrain to tires Torque and Power translation</li>
-      <li>Electrical Components- Research into electrical motors, electromagnetic clutches, encoders, Variable Frequency Drives (VFDs), and more.</li>
-      <li>Mechanical Components- Research into Pulley and belt specs, and mechanical coupling options.</li>
-      
-    </ul>
-        Overall, I learned about the flow of the workplace environment, engineering and 
-        business processes in projects, and effective communication and organization skills. This experience
-        will serve as an anchor for my career as move forward after school.<br>
   </section>
 
-  <!-- ===== Clubs ===== -->
+  <!-- ===== CLUBS ===== -->
   <section id="clubs">
     <h2>Clubs</h2>
-    
-    <h3>Purdue MCLA Division I Club Lacrosse</h3>
-    <p> August 2023 - Current </p>
-    <ul>
-      <li> Practice 3+ times a week in the fall and spring semesters</li>
-      <li> Compete with other college teams in the local area during the fall</li>
-      <li> Travel nationally in the Spring to compete in Tournaments</li>
-      <li> Volunteer as a team in the local Tippecanoe County area</li>
-    </ul>
+    <div class="card">
+      <h3>Purdue MCLA Division I Club Lacrosse</h3>
+      <p>Aug 2023 – Current</p>
+      <ul>
+        <li>Practice 3+ times weekly, compete nationally</li>
+        <li>Volunteer with local community organizations</li>
+      </ul>
+    </div>
 
-    <p> Being a part of this team has been pivital towards my development during college. It allows me to continue
-    pursing my passion for lacrosse, while also giving me a well needed break from my studies during the week. It has stimulated 
-    my social life by providing me friends to have fun and compete with. </p>
+    <div class="card">
+      <h3>Purdue SLING Research Club</h3>
+      <p>Feb 2025 – Current</p>
+      <ul>
+        <li>Research orbital dynamics in the Cis-lunar environment</li>
+        <li>Work on indirect optimal control and nonlinear dynamics</li>
+      </ul>
+    </div>
 
-    <h3>Purdue SLING Research Graduate Club</h3> <p> February 2025 - Current</p>
-    <ul>
-      <li>SLING: Space-Loving Individuals Negotiating Gravity</li>
-      <li>Study orbital dynamics and control in the Cis-lunar environment using an iteration of the Circular Restricted Three Body Problem</li>
-      <li>Work with the Controls sub-team to study indirect optimal control solutions for spacecraft and simulate complex non-linear dynamics</li>
-      <li>Utilized Taylor approximation to compute a Jacobian for linearized dynamics to find closed orbits about a specific equilibrium point</li>
-    </ul>
+    <div class="card">
+      <h3>Purdue Astronomy Club</h3>
+      <p>Aug 2024 – Current</p>
+      <ul>
+        <li>Attend lectures & stargazing events with advanced telescopes</li>
+      </ul>
+    </div>
 
-    <h2>New Involvement:</h2>
-    
-    <h3>Purdue Astronomy Club</h3>
-    <p>August 2024 - Current</p>
-    <ul>
-      <li>Club dedicated to star gazing and learning about the universe</li>
-      <li>Numerous professor lectures about relevant topics</li>
-      <li>Star Gazing events with advanced telescopes</li>
-    </ul>
-
-    <h3>Purdue Space Program</h3>
-    <p>August 2025</p>
-    <ul>
-      <li>Club Focuses: Innovation and projects in rocketry, satellites, and other space applications. </li>
-    </ul>
-    
+    <div class="card">
+      <h3>Purdue Space Program</h3>
+      <p>Aug 2025 – Current</p>
+      <ul>
+        <li>Work on rocketry, satellite, and space-related projects</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- ===== Projects ===== -->
+  <!-- ===== PROJECTS ===== -->
   <section id="projects">
     <h2>Projects</h2>
-    
-    <h3>Perseverance Rover Sample Return Mission</h3>
-    August- November 2023
-    <ul>
-      <li>Goal: Plan out the architecture for a return mission of samples from the current Mars Perseverance Rover</li>
-      <li>Worked in a team of 5 to complete research and calculations</li>
-      <li>Research: Existing technologies for launch vehicles and capabilities; Future technology for potential implementation in unique environments such as reentry. </li>
-      <li>Calculations: Delta-V and Orbit design; Mass sizing for launches from Earth and Mars; Phase timing for launch windows.</li>
-      <li>Mission Analysis: Gathered research, and calculation into a 80+ page technical report including problem scope, stakeholders, risk analysis, and other aspects.</li>
-    </ul>
-    <h3>Java Social Media Application</h3>
-    March - April 2024
-    <ul>
-      <li>Goal: Created a </li>
-      <li>Designed a social media application using Java that connected users online throuhgh a server and client with messaging capabilities</li>
-      <li>My work included creating a user object with attributes for a profile page, working with a partner to connect the client code with the server code, and supporting GUI development.</li>
-      <li>Website capabilities included a text-responsive website with the ability to hold multiple users online at once, create accounts, personalize profiles, and message other users. GUI
-      development half-integrated with exisitng software to establish a basis for the website. </li>
-    </ul>
+    <div class="card">
+      <h3>Perseverance Rover Sample Return</h3>
+      <p>Aug–Nov 2023</p>
+      <ul>
+        <li>Planned mission architecture for Mars sample return</li>
+        <li>Conducted ΔV, orbit design, and mass sizing analysis</li>
+        <li>Produced an 80+ page technical mission report</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Java Social Media Application</h3>
+      <p>Mar–Apr 2024</p>
+      <ul>
+        <li>Built client-server messaging system with Java</li>
+        <li>Implemented user profiles and GUI features</li>
+      </ul>
+    </div>
   </section>
-  
-   <!-- ===== SKILLS ===== -->
+
+  <!-- ===== SKILLS ===== 
   <section id="skills">
     <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><b>CAD:</b> AutoCAD, SolidWorks, NX, Inventor</div>
+      <div><b>Programming:</b> MATLAB, Python, Java, C++, JavaScript</div>
+      <div><b>Analysis Tools:</b> FreeFlyer, XFLR5</div>
+      <div><b>Soft Skills:</b> Leadership, Presenting, Organization</div>
+    </div>
+  </section> -->
 
-    <h3>Technical Skills</h3>
-    <li>AutoCAD- Took a preliminary course in AutoCAD to start my internship. Following this, during the entire summer
-    I had many tasks that involved modeling different layouts that existed in the plant, or were propoesd in AutoCAD. Additionally,
-    I was tasked to make chagnes and create different potential options for existing large AutoCAD files for the plant.</li>
-    <li>Other CAD- During my internship at SIA I also briefly used SolidWorks. From College and High School I also have experience
-    in NX, OnShape, and Inventor. I feel very comfortable with these CAD softwares, and confident that I can pick up any CAD
-    software that I don't have experience with.</li>
-    <li>Free Flyer- This is a space mission analysis software that I used during one of my classes at Purdue. I used it to
-    contruct orbits, study perturbations, and understand data trends.</li>
-    <li>XFLR5- This is an aerodynamics analysis software that I used for another one of my classes at Purdue. It was used to 
-    analyze low speed flow over airfoils, study 3-Dimensional wing affects, and look at aircraft stability theory.</li>
-    <li>MATLAB- I have extensive experience in MATLAB from nearly all of my classes at Purdue. I have used it for complex data
-    analysis, numerical integration, and simulation and graphing. Specifically I have been able to used it in my aerospace
-    classes to simulate attitude dynamics, orbital mechanics, dynamics and statics, and statistical analysis.</li>
-    <li>Other Programming Languages- I have experience with Python, Java, JavaScript, HTML, C++. I have taken additionally
-    classes outside of my main Aerospace major in Computer Science classes in order to refine these skills. During these
-    I have also gathered exposure to discrete mathematics.</li>
-
-    <h3>Soft Skills</h3>
-    <li>Project leadership- </li>
-    <li>Presentational Speaking</li>
-    <li>Organizational Skills</li>
+  <section id="skills">
+    <h2>Skills</h2>
+    <table class="skills-table">
+      <tr>
+        <th><i class="fas fa-drafting-compass"></i> CAD</th>
+        <th><i class="fas fa-code"></i> Programming</th>
+        <th><i class="fas fa-chart-line"></i> Analysis</th>
+        <th><i class="fas fa-users"></i> Soft Skills</th>
+      </tr>
+      <tr>
+        <td>AutoCAD, SolidWorks, NX, Inventor</td>
+        <td>MATLAB, Python, Java, C++, JavaScript</td>
+        <td>FreeFlyer, XFLR5</td>
+        <td>Leadership, Presenting, Organization</td>
+      </tr>
+    </table>
   </section>
-  
+
+
   <!-- ===== CONTACT ===== -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Phone Number: <a href= "856-206-3668">856-206-3668</a></p>
-    <p>Personal Email: <a href="willwalters444@gmail.com">willwalters@gmail.com</a></p>
-    <p>School Email: <a href="walte236@purdue.edu">walte236@purdue.edu</a></p>
-    <p>LinkedIn: <a href="www.linkedin.com/in/will-walters-3b1141250" target="_blank">www.linkedin.com/in/will-walters-3b1141250
-</a></p>
-    <p>Resume: <a href="resume.pdf" target="_blank">Download PDF</a></p>
+    <ul class="contact-list">
+      <li><i class="fas fa-phone"></i> 856-206-3668</li>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:willwalters444@gmail.com">willwalters444@gmail.com</a></li>
+      <li><i class="fas fa-envelope-open"></i> <a href="mailto:walte236@purdue.edu">walte236@purdue.edu</a></li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/will-walters-3b1141250" target="_blank">LinkedIn Profile</a></li>
+      <li><i class="fas fa-file-pdf"></i> <a href="resume.pdf" target="_blank">Download Resume</a></li>
+    </ul>
   </section>
 
   <!-- ===== FOOTER ===== -->
