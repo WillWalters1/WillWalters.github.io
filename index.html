@@ -80,14 +80,20 @@
     }
 
     /* ===== CARD STYLE ===== */
-    .card {
-      background: #f9f9ff;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      justify-content: center;
-      border-radius: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
+  .clubs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 20px; /* space between cards */
+  }
+  .card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1)
+
+  }
 
     /* ===== GRID STYLES ===== */
     .skills-grid {
@@ -193,8 +199,10 @@
   }
 </script>
 
+
+
   <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
+ <section id="experience">
     <h2>Work Experience</h2>
     <div class="card">
       <h3>Subaru of Indiana Automotive, Inc.</h3>
@@ -206,16 +214,14 @@
         <li>Collaborated with contractors and managed RFQ process</li>
       </ul>
     </div>
-
-    <div class="card">
-      <h3>Test</h3>
-    </div>
   </section>
 
-  <!-- ===== CLUBS ===== -->
-  <section id="clubs", style="width: 100%; height: 300px;">
-    <h2>Clubs</h2>
-    <div class="card", style = "width: 45%; float: left; background-color: lightblue;>
+
+<!-- ===== CLUBS ===== -->
+<section id="clubs">
+  <h2>Clubs</h2>
+  <div class="clubs-grid">
+    <div class="card">
       <h3>Purdue MCLA Division I Club Lacrosse</h3>
       <p>Aug 2023 – Current</p>
       <ul>
@@ -224,7 +230,7 @@
       </ul>
     </div>
 
-    <div class="card", style = "width: 45%; float: right; background-color: lightblue;>
+    <div class="card">
       <h3>Purdue SLING Research Club</h3>
       <p>Feb 2025 – Current</p>
       <ul>
@@ -248,7 +254,8 @@
         <li>Work on rocketry, satellite, and space-related projects</li>
       </ul>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects">
